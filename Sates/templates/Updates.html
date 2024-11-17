@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title%}Updates Page{%endblock%}
+
+
+{%block content%}
+    <div class="topnav">
+        <form action="/Updates" , method= "get", id="search-form">
+            <input type="text" placeholder="Search.." name ="search">
+        </form>
+        <h1>Satellite Information</h1>
+        {% if satellites%}
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <!--Columns HERE-->
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Manufacturer</th>
+                    <th scope="col">Cost(in million$)</th>
+                    <th scope="col">Continent</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                        <!--Rows inside the table:-->
+                {%for satellites in satellites%}
+                {% include "includes/sates_modals.html"%}
+                    <tr>
+                        <td>{{satellites.id}}</td>
+                        <td>{{satellites.name}}
+                        <td>{{satellites.satellite_type}}</td>
+                        <td>{{satellites.manufacturer}}</td>
+                        <td>{{satellites.cost}}</td>
+                        <td>{{satellites.continent}}</td>
+                        <td>
+                            <button class="btn btn-outline btn-info" data-toggle="modal" data-target="#Modal-MoreInfo-{{satellites.id}}">More Info</button>
+                                    
+                        </td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No satellite information submitted yet.</p>
+        {% endif %}
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+{%endblock%}

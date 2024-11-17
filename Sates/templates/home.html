@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block title%}Home page{%endblock%}
+{%block content%}
+    <section id="showcase">
+        <div class ="container">
+            <h1>Types of Satellites: Based On Different Orbits & Real - World Uses, Costs and Manufacturers.</h1>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id ="main">
+            <h1>Summary</h1>
+            <P>
+                Over the years, Satellites have become essential for various activities like broadcasting, navigation, and remote sensing. Each type has unique orbits for different missions, helping us learn about the planet, connect people, mitigate disasters, and open new technological possibilities for humanity.</P>
+            <a class="btn btn-primary" href="{{url_for('info_page')}}">Next Page</a>
+        </section>
+        <aside id="sidebar">
+            <P>
+                A satellite is an object in space that orbits or circles around a bigger object. There are two kinds of satellites: natural (such as the moon orbiting the Earth) or artificial (such as the International Space Station orbiting the Earth).
+            </P>
+        </aside>
+    </div>
+{%endblock%}

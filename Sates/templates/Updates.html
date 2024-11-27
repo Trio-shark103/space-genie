@@ -6,9 +6,15 @@
     <div class="topnav">
         <form action="/Updates" , method= "get", id="search-form">
             <input type="text" placeholder="Search.." name ="search">
+            
         </form>
-        <h1>Satellite Information</h1>
-        {% if satellites%}
+        <h1>Satellite Information </h1>
+        {%if satellites %}
+        click here to download database <a href="/download">
+                                            <button>
+                                                <img src="../static/images/download.png" alt="download link">
+                                            </button>
+                                        </a>
         <table class="table table-hover table-dark">
             <thead>
                 <tr>

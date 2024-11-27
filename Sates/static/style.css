@@ -9,7 +9,7 @@
 	padding: 6px 25px;
 	border-radius: 60px;
 	font-size: 17px;
-	margin:15px 16px 10px 0px;
+	margin:15px 10px 10px 0px;
 	
 }
 
@@ -34,7 +34,7 @@
 .video-container{
 	position:relative;
 	width: 100vw; 
-    height: 30vh; 
+    height: 50vh; 
     overflow: hidden; 
 }
 
@@ -47,10 +47,10 @@
 
 .content {
 	position:absolute;
-	top: 30%; 
+	top: 40%; 
     left: 50%; 
     transform: translateX(-50%);
-	font-size: 3rem; 
+	font-size: 5rem; 
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
 	color: #f1f1f1;
 	width: 100%;
